@@ -28,7 +28,7 @@ Click **Next** ▸ in the imager, then in the pop‑up **Use OS customisation?
 * ✔ **Set username and password**
 
   * **Username:** `pi`
-  * **Password:** `mafat`
+  * **Password:** `mypass`
 * ✔ **Configure wireless LAN**
 
   * **SSID / Password:** *fill in your 2.4 GHz network*
