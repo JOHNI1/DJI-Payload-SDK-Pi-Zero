@@ -10,7 +10,13 @@ sudo apt install libgpiod-dev gpiod
 ```
   
 </details>
-
+<details>
+  <summary>Make sure you are connected to the Raspberry Pi over ssh</summary>
+  
+[`ssh-connection.md`](ssh-connection.md)
+  
+</details>
+<br/>
 
 Below is a minimal C++ example that **sets a GPIO pin HIGH for 2 seconds, then LOW**.
 
