@@ -1,0 +1,185 @@
+yonitakahashi@raspberrypi:~ $ cd DJI-Payload-SDK-Pi-Zero/
+yonitakahashi@raspberrypi:~/DJI-Payload-SDK-Pi-Zero $ cmake -B build
+-- The C compiler identification is GNU 12.2.0
+-- The CXX compiler identification is GNU 12.2.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+CMake Deprecation Warning at Payload-SDK/CMakeLists.txt:1 (cmake_minimum_required):
+  Compatibility with CMake < 2.8.12 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value or use a ...<max> suffix to tell
+  CMake that the project does not need compatibility with older versions.
+
+
+-- Cannot Find OPUS
+-- Found LIBUSB installed in the system
+--  - Includes: /usr/include/libusb-1.0
+--  - Libraries: /usr/lib/aarch64-linux-gnu/libusb-1.0.so
+-- Did not find OpenCV in the system, image data is inside RecvContainer as raw data
+-- Cannot Find FFMPEG
+-- Cannot Find OPUS
+-- Found LIBUSB installed in the system
+--  - Includes: /usr/include/libusb-1.0
+--  - Libraries: /usr/lib/aarch64-linux-gnu/libusb-1.0.so
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/yonitakahashi/DJI-Payload-SDK-Pi-Zero/build
+yonitakahashi@raspberrypi:~/DJI-Payload-SDK-Pi-Zero $ cmake --build build -j4
+[  2%] Built target entry
+[  2%] Building CXX object CMakeFiles/listener.dir/src/listener.cpp.o
+[  2%] Building CXX object CMakeFiles/gpio_payload.dir/src/main.cpp.o
+[  2%] Building C object Payload-SDK/samples/sample_c/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux.dir/application/main.c.o
+/home/yonitakahashi/DJI-Payload-SDK-Pi-Zero/src/listener.cpp:12:10: fatal error: dji_core.h: No such file or directory
+   12 | #include <dji_core.h>
+      |          ^~~~~~~~~~~~
+compilation terminated.
+gmake[2]: *** [CMakeFiles/listener.dir/build.make:76: CMakeFiles/listener.dir/src/listener.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:163: CMakeFiles/listener.dir/all] Error 2
+gmake[1]: *** Waiting for unfinished jobs....
+/home/yonitakahashi/DJI-Payload-SDK-Pi-Zero/src/main.cpp:1:10: fatal error: psdk_core.h: No such file or directory
+    1 | #include <psdk_core.h>           // PSDK entry point
+      |          ^~~~~~~~~~~~~
+compilation terminated.
+gmake[2]: *** [CMakeFiles/gpio_payload.dir/build.make:76: CMakeFiles/gpio_payload.dir/src/main.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/gpio_payload.dir/all] Error 2
+[  3%] Building C object Payload-SDK/samples/sample_c/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux.dir/__/__/__/module_sample/camera_emu/dji_media_file_manage/dji_media_file_core.c.o
+[  4%] Building CXX object Payload-SDK/samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/application/application.cpp.o
+[  5%] Building C object Payload-SDK/samples/sample_c/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux.dir/__/__/__/module_sample/camera_emu/dji_media_file_manage/dji_media_file_jpg.c.o
+[  6%] Building C object Payload-SDK/samples/sample_c/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux.dir/__/__/__/module_sample/camera_emu/dji_media_file_manage/dji_media_file_mp4.c.o
+[  7%] Building C object Payload-SDK/samples/sample_c/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux.dir/__/__/__/module_sample/camera_emu/test_payload_cam_emu_base.c.o
+[  8%] Building C object Payload-SDK/samples/sample_c/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux.dir/__/__/__/module_sample/camera_emu/test_payload_cam_emu_media.c.o
+[  9%] Building CXX object Payload-SDK/samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/application/main.cpp.o
+[ 10%] Building C object Payload-SDK/samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/camera_emu/dji_media_file_manage/dji_media_file_core.c.o
+[ 11%] Building C object Payload-SDK/samples/sample_c/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux.dir/__/__/__/module_sample/camera_manager/test_camera_manager.c.o
+[ 12%] Building C object Payload-SDK/samples/sample_c/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux.dir/__/__/__/module_sample/data_transmission/test_data_transmission.c.o
+[ 13%] Building C object Payload-SDK/samples/sample_c/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux.dir/__/__/__/module_sample/fc_subscription/test_fc_subscription.c.o
+[ 13%] Building C object Payload-SDK/samples/sample_c/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux.dir/__/__/__/module_sample/flight_control/test_flight_control.c.o
+[ 14%] Building C object Payload-SDK/samples/sample_c/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux.dir/__/__/__/module_sample/gimbal_emu/test_payload_gimbal_emu.c.o
+[ 15%] Building C object Payload-SDK/samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/camera_emu/dji_media_file_manage/dji_media_file_jpg.c.o
+[ 16%] Building C object Payload-SDK/samples/sample_c/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux.dir/__/__/__/module_sample/gimbal_manager/test_gimbal_manager.c.o
+[ 17%] Building C object Payload-SDK/samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/camera_emu/dji_media_file_manage/dji_media_file_mp4.c.o
+[ 18%] Building C object Payload-SDK/samples/sample_c/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux.dir/__/__/__/module_sample/hms/test_hms.c.o
+[ 19%] Building C object Payload-SDK/samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/camera_emu/test_payload_cam_emu_base.c.o
+[ 20%] Building C object Payload-SDK/samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/camera_emu/test_payload_cam_emu_media.c.o
+[ 20%] Building C object Payload-SDK/samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/camera_manager/test_camera_manager.c.o
+[ 21%] Building C object Payload-SDK/samples/sample_c/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux.dir/__/__/__/module_sample/interest_point/test_interest_point.c.o
+[ 22%] Building C object Payload-SDK/samples/sample_c/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux.dir/__/__/__/module_sample/liveview/test_liveview.c.o
+[ 23%] Building C object Payload-SDK/samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/data_transmission/test_data_transmission.c.o
+[ 24%] Building C object Payload-SDK/samples/sample_c/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux.dir/__/__/__/module_sample/mop_channel/test_mop_channel.c.o
+[ 25%] Building C object Payload-SDK/samples/sample_c/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux.dir/__/__/__/module_sample/payload_collaboration/test_payload_collaboration.c.o
+[ 26%] Building C object Payload-SDK/samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/fc_subscription/test_fc_subscription.c.o
+[ 28%] Building C object Payload-SDK/samples/sample_c/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux.dir/__/__/__/module_sample/perception/test_perception.c.o
+[ 28%] Building C object Payload-SDK/samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/flight_control/test_flight_control.c.o
+[ 29%] Building C object Payload-SDK/samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/gimbal_emu/test_payload_gimbal_emu.c.o
+[ 29%] Building C object Payload-SDK/samples/sample_c/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux.dir/__/__/__/module_sample/positioning/test_positioning.c.o
+[ 30%] Building C object Payload-SDK/samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/gimbal_manager/test_gimbal_manager.c.o
+[ 31%] Building C object Payload-SDK/samples/sample_c/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux.dir/__/__/__/module_sample/power_management/test_power_management.c.o
+[ 32%] Building C object Payload-SDK/samples/sample_c/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux.dir/__/__/__/module_sample/time_sync/test_time_sync.c.o
+[ 33%] Building C object Payload-SDK/samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/hms/test_hms.c.o
+[ 34%] Building C object Payload-SDK/samples/sample_c/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux.dir/__/__/__/module_sample/upgrade/test_upgrade.c.o
+[ 35%] Building C object Payload-SDK/samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/interest_point/test_interest_point.c.o
+[ 36%] Building C object Payload-SDK/samples/sample_c/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux.dir/__/__/__/module_sample/upgrade/test_upgrade_common_file_transfer.c.o
+[ 37%] Building C object Payload-SDK/samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/liveview/test_liveview.c.o
+[ 37%] Building C object Payload-SDK/samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/mop_channel/test_mop_channel.c.o
+[ 38%] Building C object Payload-SDK/samples/sample_c/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux.dir/__/__/__/module_sample/upgrade/test_upgrade_platform_opt.c.o
+[ 39%] Building C object Payload-SDK/samples/sample_c/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux.dir/__/__/__/module_sample/utils/cJSON.c.o
+[ 40%] Building C object Payload-SDK/samples/sample_c/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux.dir/__/__/__/module_sample/utils/dji_config_manager.c.o
+[ 41%] Building C object Payload-SDK/samples/sample_c/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux.dir/__/__/__/module_sample/utils/util_buffer.c.o
+[ 42%] Building C object Payload-SDK/samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/payload_collaboration/test_payload_collaboration.c.o
+[ 43%] Building C object Payload-SDK/samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/perception/test_perception.c.o
+[ 44%] Building C object Payload-SDK/samples/sample_c/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux.dir/__/__/__/module_sample/utils/util_file.c.o
+[ 45%] Building C object Payload-SDK/samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/positioning/test_positioning.c.o
+[ 45%] Building C object Payload-SDK/samples/sample_c/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux.dir/__/__/__/module_sample/utils/util_link_list.c.o
+[ 46%] Building C object Payload-SDK/samples/sample_c/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux.dir/__/__/__/module_sample/utils/util_md5.c.o
+[ 47%] Building C object Payload-SDK/samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/power_management/test_power_management.c.o
+[ 48%] Building C object Payload-SDK/samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/time_sync/test_time_sync.c.o
+[ 49%] Building C object Payload-SDK/samples/sample_c/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux.dir/__/__/__/module_sample/utils/util_misc.c.o
+[ 50%] Building C object Payload-SDK/samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/upgrade/test_upgrade.c.o
+[ 51%] Building C object Payload-SDK/samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/upgrade/test_upgrade_common_file_transfer.c.o
+[ 52%] Building C object Payload-SDK/samples/sample_c/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux.dir/__/__/__/module_sample/utils/util_time.c.o
+[ 53%] Building C object Payload-SDK/samples/sample_c/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux.dir/__/__/__/module_sample/waypoint_v2/test_waypoint_v2.c.o
+[ 54%] Building C object Payload-SDK/samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/upgrade/test_upgrade_platform_opt.c.o
+[ 55%] Building C object Payload-SDK/samples/sample_c/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux.dir/__/__/__/module_sample/waypoint_v3/test_waypoint_v3.c.o
+[ 56%] Building C object Payload-SDK/samples/sample_c/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux.dir/__/__/__/module_sample/widget/file_binary_array_list_en.c.o
+[ 56%] Building C object Payload-SDK/samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/utils/cJSON.c.o
+[ 57%] Building C object Payload-SDK/samples/sample_c/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux.dir/__/__/__/module_sample/widget/test_widget.c.o
+[ 58%] Building C object Payload-SDK/samples/sample_c/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux.dir/__/__/__/module_sample/widget/test_widget_speaker.c.o
+[ 59%] Building C object Payload-SDK/samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/utils/dji_config_manager.c.o
+[ 60%] Building C object Payload-SDK/samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/utils/util_buffer.c.o
+[ 60%] Building C object Payload-SDK/samples/sample_c/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux.dir/__/__/__/module_sample/widget_interaction_test/file_binary_array_list_en.c.o
+[ 61%] Building C object Payload-SDK/samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/utils/util_file.c.o
+[ 62%] Building C object Payload-SDK/samples/sample_c/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux.dir/__/__/__/module_sample/widget_interaction_test/test_widget_interaction.c.o
+[ 63%] Building C object Payload-SDK/samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/utils/util_link_list.c.o
+[ 64%] Building C object Payload-SDK/samples/sample_c/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux.dir/__/__/__/module_sample/xport/test_payload_xport.c.o
+[ 65%] Building C object Payload-SDK/samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/utils/util_md5.c.o
+[ 66%] Building C object Payload-SDK/samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/utils/util_misc.c.o
+[ 67%] Building C object Payload-SDK/samples/sample_c/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux.dir/__/common/monitor/sys_monitor.c.o
+[ 68%] Building C object Payload-SDK/samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/utils/util_time.c.o
+[ 69%] Building C object Payload-SDK/samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/waypoint_v2/test_waypoint_v2.c.o
+[ 70%] Building C object Payload-SDK/samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/waypoint_v3/test_waypoint_v3.c.o
+[ 70%] Building C object Payload-SDK/samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/widget/file_binary_array_list_en.c.o
+[ 71%] Building C object Payload-SDK/samples/sample_c/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux.dir/__/common/osal/osal.c.o
+[ 72%] Building C object Payload-SDK/samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/widget/test_widget.c.o
+[ 73%] Building C object Payload-SDK/samples/sample_c/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux.dir/__/common/osal/osal_fs.c.o
+[ 74%] Building C object Payload-SDK/samples/sample_c/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux.dir/__/common/osal/osal_socket.c.o
+[ 75%] Building C object Payload-SDK/samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/widget/test_widget_speaker.c.o
+[ 76%] Building C object Payload-SDK/samples/sample_c/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux.dir/__/common/upgrade_platform_opt/upgrade_platform_opt_linux.c.o
+[ 77%] Building C object Payload-SDK/samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/widget_interaction_test/file_binary_array_list_en.c.o
+[ 78%] Building C object Payload-SDK/samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/widget_interaction_test/test_widget_interaction.c.o
+[ 79%] Building C object Payload-SDK/samples/sample_c/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux.dir/hal/hal_network.c.o
+[ 80%] Building C object Payload-SDK/samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/__/sample_c/module_sample/xport/test_payload_xport.c.o
+[ 81%] Building C object Payload-SDK/samples/sample_c/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux.dir/hal/hal_usb_bulk.c.o
+[ 81%] Building C object Payload-SDK/samples/sample_c/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux.dir/hal/hal_uart.c.o
+[ 82%] Building CXX object Payload-SDK/samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/module_sample/camera_manager/test_camera_manager_entry.cpp.o
+[ 83%] Building CXX object Payload-SDK/samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/module_sample/flight_controller/test_flight_controller_command_flying.cpp.o
+[ 84%] Building CXX object Payload-SDK/samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/module_sample/flight_controller/test_flight_controller_entry.cpp.o
+[ 85%] Linking C executable ../../../../../../bin/dji_sdk_demo_linux
+CMake Deprecation Warning at Payload-SDK/CMakeLists.txt:1 (cmake_minimum_required):
+  Compatibility with CMake < 2.8.12 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value or use a ...<max> suffix to tell
+  CMake that the project does not need compatibility with older versions.
+
+
+-- Cannot Find OPUS
+-- Found LIBUSB installed in the system
+--  - Includes: /usr/include/libusb-1.0
+--  - Libraries: /usr/lib/aarch64-linux-gnu/libusb-1.0.so
+-- Did not find OpenCV in the system, image data is inside RecvContainer as raw data
+-- Cannot Find FFMPEG
+-- Cannot Find OPUS
+-- Found LIBUSB installed in the system
+--  - Includes: /usr/include/libusb-1.0
+--  - Libraries: /usr/lib/aarch64-linux-gnu/libusb-1.0.so
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/yonitakahashi/DJI-Payload-SDK-Pi-Zero/build
+[ 85%] Built target dji_sdk_demo_linux
+[ 85%] Building CXX object Payload-SDK/samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/module_sample/gimbal/test_gimbal_entry.cpp.o
+[ 86%] Building CXX object Payload-SDK/samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/module_sample/hms_manager/hms_manager_entry.cpp.o
+[ 87%] Building CXX object Payload-SDK/samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/module_sample/liveview/dji_camera_image_handler.cpp.o
+[ 88%] Building CXX object Payload-SDK/samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/module_sample/liveview/dji_camera_stream_decoder.cpp.o
+[ 89%] Building CXX object Payload-SDK/samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/module_sample/liveview/test_liveview.cpp.o
+[ 90%] Building CXX object Payload-SDK/samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/module_sample/liveview/test_liveview_entry.cpp.o
+[ 91%] Building CXX object Payload-SDK/samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/module_sample/perception/test_perception.cpp.o
+[ 92%] Building CXX object Payload-SDK/samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/__/__/module_sample/perception/test_perception_entry.cpp.o
+[ 93%] Building C object Payload-SDK/samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/common/osal/osal.c.o
+[ 93%] Building C object Payload-SDK/samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/common/osal/osal_fs.c.o
+[ 94%] Building C object Payload-SDK/samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/__/common/osal/osal_socket.c.o
+[ 95%] Building C object Payload-SDK/samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/hal/hal_network.c.o
+[ 96%] Building C object Payload-SDK/samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/hal/hal_uart.c.o
+[ 97%] Building C object Payload-SDK/samples/sample_c++/platform/linux/manifold2/CMakeFiles/dji_sdk_demo_linux_cxx.dir/hal/hal_usb_bulk.c.o
+[ 98%] Linking CXX executable ../../../../../../bin/dji_sdk_demo_linux_cxx
+[ 98%] Built target dji_sdk_demo_linux_cxx
+gmake: *** [Makefile:136: all] Error 2
+yonitakahashi@raspberrypi:~/DJI-Payload-SDK-Pi-Zero $ 
