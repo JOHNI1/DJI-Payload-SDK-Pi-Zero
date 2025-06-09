@@ -39,18 +39,14 @@ You have **two ways** to reach the Raspberry Pi Zero 2 W without a screen.
    ```bash
    sudo nano /boot/firmware/config.txt
    ```
-   Add inside the [all] section: `dtoverlay=dwc2`  <br/>
+   Add inside the [all] section:
+   ```txt
+   enable_uart=1
+   dtoverlay=disable-bt
+   ```
    Save by pressing Ctrl+O, Ctrl+M, Ctrl+X <br/>
 
 2. <br/>
-
-   ```bash
-   sudo nano /boot/firmware/cmdline.txt
-   ```
-   Append ONE space-separated token to the single line: `modules-load=dwc2,g_ether` <br/>
-   Save by pressing Ctrl+O, Ctrl+M, Ctrl+X <br/>
-
-3. <br/>
 
    To apply changes, reboot:
    ```bash
@@ -60,15 +56,8 @@ You have **two ways** to reach the Raspberry Pi Zero 2 W without a screen.
 ### Cable connection & login
 
 1. Power via **PWR IN** as usual.
-2. Plug a **USB-A ↔ micro-USB data cable** into the Pi’s **USB** port (the one *next to* PWR IN) and your laptop.
-3. Your computer spawns a new NIC (`usb0`, `enx…`, or *RNDIS/Ethernet Gadget*).
-4. Most hosts resolve the Pi with mDNS:
-
+2. connect USB-to-TTL module like FT232 to the raspberry pi. (GND->GND, RX->TX, TX->RX)
+3. connect:
    ```bash
-   ssh pi@raspberrypi.local
-   # password: mypass
+   screen /dev/ttyUSB0 115200
    ```
-
-   If `.local` fails, assign your host PC an IP such as `192.168.7.1/24`; the Pi will self-assign `192.168.7.2`.
-
-You can now reach the Pi anywhere with a single cable — perfect for on-site debugging or when Wi-Fi is unavailable.
